@@ -1,0 +1,466 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTDTECHNOLOGIES</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="pictures/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'previousyearinformation.css' %}">
+    <script src="script.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="overall">
+    <div class="header">
+            <div>
+
+            </div>
+            <div class="header-title">
+                <a><h1>thehtdtechnologies.com</h1></a>
+               
+            </div>
+            <div>   
+            </div>    
+    </div>
+
+<nav class="navbar1">
+    <nav class="navbar2">
+        <ul >
+        
+            <li >
+                <a href="/">
+                <i class="fa fa-home"></i> HOME
+                </a> 
+            </li>
+       
+        
+        
+            <li>
+                <a href="{% url 'admissionguidelines' %}">
+                <i class="fa fa-archive"></i>ADMISSION GUIDELINES
+                </a>
+            </li>
+        
+
+            <li >
+                <a href="https://thehdtechnologies.com/jnj/jnj.aspx">
+                <i class="fa-solid fa-graduation-cap"></i> COLLEGE LOGIN </i>
+            </a>
+        </li>
+
+     
+
+        <li class="blong">
+            <a href="#">
+                <i class="fa-solid fa-bell"></i> PREVIOUS YEAR INFORMATION
+            </a>
+        </li> 
+
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-certificate"></i> COURSE KNOWLEDGE
+            </a>
+        </li>
+
+        <li>
+            <a href="{% url 'contact' %}">
+                <i class="fa-solid fa-user"></i> CONTACT US <i class="fa-duotone fa-solid fa-caret-down"></i>
+            </a>
+        </li>
+
+      
+
+    </ul>
+
+
+
+    </nav>
+</nav>
+
+
+
+<div>
+
+    <marquee behavior="scroll" direction="left" scrollamount="10" id="scrolling-text">
+        <b>
+   ## CLICK HERE TO APPLY FOR <a href="https://apps.thehdtechnologies.com/mbbsbds/home.aspx" target="_blank"> MBBS </a> ##
+</b>
+    </marquee>
+
+</div>
+
+
+<div class="form">
+    <h4>
+        Select Academic Year
+    </h4>
+    <select id="selection" name="year">
+        <option value="2023 - 2024" selected>2023 - 2024</option>
+        <option value="2022 - 2023">2022 - 2023</option>
+        <option value="2021 - 2022">2021 - 2022</option>
+        <option value="2020 - 2021">2020 - 2021</option>
+        <option value="2019 - 2020">2019 - 2020</option>
+        <option value="2018 - 2019">2018 - 2019</option>
+        <option value="2017 - 2018">2017 - 2018</option>
+        <option value="2016 - 2017">2016 - 2017</option>
+        <option value="2015 - 2016">2015 - 2016</option>
+        <option value="2014 - 2015">2014 - 2015</option>
+        <option value="2013 - 2014">2013 - 2014</option>
+        <option value="2012 - 2013">2012 - 2013</option>
+        <option value="2011 - 2012">2011 - 2012</option>
+        <option value="2010 - 2011">2010 - 2011</option>
+        <option value="2009 - 2010">2009 - 2010</option>
+        <option value="2008 - 2009">2008 - 2009</option>
+        <option value="2007 - 2008">2007 - 2008</option>
+        <option value="2006 - 2007">2006 - 2007</option>
+        <option value="2005 - 2006">2005 - 2006</option>
+        <option value="2004 - 2005">2004 - 2005</option>
+        <option value="2003 - 2004">2003 - 2004</option>
+        <option value="2002 - 2003">2002 - 2003</option>
+        <option value="2001 - 2002">2001 - 2002</option>
+        <option value="2000 - 2001">2000 - 2001</option>
+        <option value="1999 - 2000">1999 - 2000</option>
+        <option value="1998 - 1999">1998 - 1999</option>
+        <option value="1997 - 1998">1997 - 1998</option>
+        <option value="1996 - 1997">1996 - 1997</option>
+        <option value="1995 - 1996">1995 - 1996</option>
+        <option value="1994 - 1995">1994 - 1995</option>
+        <option value="1993 - 1994">1993 - 1994</option>
+        <option value="1992 - 1993">1992 - 1993</option>
+        <option value="1991 - 1992">1991 - 1992</option>
+        <option value="1990 - 1991">1990 - 1991</option>
+        <option value="1989 - 1990">1989 - 1990</option>
+        <option value="1988 - 1989">1988 - 1989</option>
+        <option value="1987 - 1988">1987 - 1988</option>
+        <option value="1986 - 1987">1986 - 1987</option>
+        <option value="1985 - 1986">1985 - 1986</option>
+        <option value="1984 - 1985">1984 - 1985</option>
+    </select>
+    
+</div>
+
+
+<div class="pdf-download">
+    <a href="#"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a> -- Download
+</div>
+
+
+<div>
+ 
+
+    <table class="archive-table" id="table1">
+        <thead>
+            <tr>
+                <th>SL.NO</th>
+                <th>SESSION</th>
+                <th>COURSE</th>
+                <th>PROSPECTUS</th>
+                <th>MERIT LIST</th>
+                <th>SCHEDULE</th>
+                <th>ALLOTTED LIST </th>
+                <th>AMENDMENTS</th>
+                <th>CUT OFF</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>2023-2024</td>
+                <td>SUPER SPECIALITY COURSES</td>
+                <td class="center"> <a href="#" target="_blank"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td class="center"> <a href="#" target="_blank"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2023-2024</td>
+                <td>M.B.B.S/B.D.S</td>
+                <td class="center"> <a href="#" target="_blank"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td class="center"> <a href="#" target="_blank"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>2023-2024</td>
+                <td>M.P.T.</td>
+                <td class="center"> <a  href="#" target="_blank"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td class="center"> <a href="#" target="_blank" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>2023-2024</td>
+                <td>M.PHARMACY</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>2023-2024</td>
+                <td>M.Phil (CLINICAL SOCIAL WORK )</td>
+                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td class="center"> <a href="#"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>2023-2024</td>
+                <td>M.PHIL CLINICAL PSYCHOLOGY</td>
+                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>2023-2024</td>
+                <td>M.Sc., MOLECULAR VIROLOGY</td>
+                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>2023-2024</td>
+                <td>M.Sc., NURSING</td>
+                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>2023-2024</td>
+                <td>NURSING FOR WOMEN(DGNM)</td>
+                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>2023-2024</td>
+                <td>PARAMEDICAL CERTIFICATE/ DIPLOMA COURSES</td>
+                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>2023-2024</td>
+                <td>PARAMEDICAL DEGREE COURSES</td>
+                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>2023-2024</td>
+                <td>	PHARM.D</td>
+                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td class="center"> <a href="#"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>2023-2024</td>
+                <td>PHARMACY( DIPLOMA IN PHARMACY)</td>
+                <td class="center"> <a href="#"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>2023-2024</td>
+                <td>PHARMACY(B.PHARM LATERAL ENTRY)</td>
+                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>2023-2024</td>
+                <td>POST BASIC B.Sc., NURSING</td>
+                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td class="center"> <a href="#"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>2023-2024</td>
+                <td>POST DOCTORAL FELLOWSHIP IN GYNAEC-ONCOLOGY</td>
+                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>2023-2024</td>
+                <td>	POST DOCTORAL FELLOWSHIP IN MAS</td>
+                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>2023-2024</td>
+                <td>POST GRADUATE - DENTAL COURSES</td>
+                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>19</td>
+                <td>2023-2024</td>
+                <td>POST GRADUATE - MEDICAL COURSES</td>
+                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>2023-2024</td>
+                <td>SUPER SPECIALITY COURSES</td>
+                <td class="center"> <a href="#"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+          
+
+            </tr>
+        </tbody>
+        
+    </table>
+
+</div>
+
+
+
+<footer>
+    <p>Copyright © 2024 - thehtdtechnologies.com - All Rights Reserved</p>
+            <p>Designed and Hosted by <a href="/" >thehtdtechnologies.com</a></p>
+
+</footer>
+
+
+
+</div>
+
+<script>
+
+
+    <!-- use JAVASCRIPT code here....!-->
+
+
+{% comment %} 
+document.getElementById('selection').addEventListener('change', function () {
+    var selectedYear = this.value;
+    var endYear = selectedYear.split(" - ")[1];
+
+    /*
+    var tableRows = document.querySelectorAll('#table1 tbody tr');
+
+    tableRows.forEach(function (row) {
+        row.cells[1].innerText = selectedYear;
+    });
+
+  
+    if (selectedYear="2023-2024"){
+       window.location.href="previousyearinformation.html"
+    }
+    else 
+      */
+    if(selectedYear==="2023 - 2024"){
+        window.location.href='#'
+    }else{
+        window.location.href = `years/${endYear}.html`;
+    }
+      
+}); {% endcomment %}
+
+
+
+
+
+const marquee= document.getElementById("scrolling-text")
+
+marquee.addEventListener('mouseover',() =>{
+marquee.stop();
+})
+
+marquee.addEventListener('mouseout',() =>{
+marquee.start();
+})
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+

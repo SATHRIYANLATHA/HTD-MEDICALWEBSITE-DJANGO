@@ -1,0 +1,821 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTDTECHNOLOGIES</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="pictures/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'admissionguidelines.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="overall">
+    <div class="header">
+            <div>
+
+            </div>
+            <div class="header-title">
+                <h1>thehtdtechnologies.com</h1>
+               
+            </div>
+            <div>   
+            </div>    
+    </div>
+
+<nav class="navbar1">
+    <nav class="navbar2">
+        <ul >
+        
+            <li >
+                <a href="/">
+                <i class="fa fa-home"></i> HOME
+                </a> 
+            </li>
+       
+        
+        
+            <li class="blong">
+                <a href="#">
+                <i class="fa fa-archive"></i>ADMISSION GUIDELINES
+                </a>
+            </li>
+        
+
+            <li >
+                <a href="https://thehdtechnologies.com/jnj/jnj.aspx">
+                <i class="fa-solid fa-graduation-cap"></i> COLLEGE LOGIN 
+            </a>
+        </li>
+
+        <li>
+            <a href="{% url 'previousyearinformation' %}">
+                <i class="fa-solid fa-earth-asia"></i> PREVIOUS YEAR INFORMATION
+            </a>
+        </li>
+
+      
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-certificate"></i> COURSE KNOWLEDGE
+            </a>
+        </li>
+
+        <li>
+            <a href="{% url 'contact' %}">
+                <i class="fa-solid fa-user"></i> CONTACT US 
+            </a>
+        </li>
+
+      
+
+    </ul>
+
+
+
+    </nav>
+</nav>
+
+
+
+<div>
+
+    <marquee behavior="scroll" direction="left" scrollamount="10" id="scrolling-text">
+        <b>
+            ## CLICK HERE TO APPLY FOR <a href="https://apps.thehdtechnologies.com/mbbsbds/home.aspx" target="_blank"> MBBS </a> ##
+         </b>
+    </marquee>
+
+</div>
+
+
+<!--    COURSES AND NOTIFICATION DISPLAY  -->
+
+
+
+    <!--  PG MEDICAL COURSES -->
+
+    <div class="pg" id="divpg">
+        <button class="butt-pg" id="buttpg"> <i class="fa-duotone fa-solid fa-caret-down"></i>  PG MEDICAL COURSES</button>
+        <ul class="show-pg" id="showpg">
+            <li></li>
+            <li><button id="pgbutt1">MENU - 1</button></li>
+            <li><button id="pgbutt2">MENU - 2</button></li>
+            <li><button id="pgbutt3">MENU - 3</button></li>
+            <li><button id="pgbutt4">MENU - 4</button></li>
+        </ul>
+    </div>
+
+     <!--  PG PARAMEDICAL COURSES -->
+
+    <div class="pgpara" id="divpgpara">
+        <button class="butt-pgpara" id="buttpgpara"> <i class="fa-duotone fa-solid fa-caret-down"></i>  PG PARAMEDICAL COURSES</button>
+        <ul class="show-pgpara" id="showpgpara">
+            <li></li>
+            <li><button id="pgparabutt1">MENU - 1</button></li>
+            <li><button id="pgparabutt2">MENU - 2</button></li>
+            <li><button id="pgparabutt3">MENU - 3</button></li>
+            <li><button id="pgparabutt4">MENU - 4</button></li>
+        </ul>
+    </div>
+
+
+    
+
+
+    <!--  UG MEDICAL COURSES -->
+
+    <div class="ug" id="divug" >
+        <button class="butt-ug" id="buttug"><i class="fa-duotone fa-solid fa-caret-down"></i>  UG MEDICAL COURSES</button>
+       <ul class="show-ug" id="showug">
+                 <li></li>
+                 <li><button id="ugbutt1">MENU - 1</button> </li>
+                 <li><button id="ugbutt2">MENU - 2</button></li>
+                 <li> <button id="ugbutt3">MENU - 3</button></li>
+                 <li> <button id="ugbutt4">MENU - 4</button></li>
+            
+       </ul>
+    </div>
+
+
+    <!--   PARAMEDICAL COURSES -->
+
+     <div class="pmc" id="divpmc">
+        <button class="butt-pmc" id="buttpmc" ><i class="fa-duotone fa-solid fa-caret-down"></i>  PARAMEDICAL COURSES</button>
+        <ul class="show-pmc" id="showpmc">
+            <li></li>
+            <li><button id="pmcbutt1">MENU - 1</button></li>
+            <li><button id="pmcbutt2">MENU - 2 </button></li>
+            <li><button id="pmcbutt3">MENU - 3</button></li>
+            <li><button id="pmcbutt4">MENU - 4</button></li>
+        </ul>
+     </div>
+
+
+
+
+
+<div class="newnoti">
+
+    <div  class="newnotihead">
+        <h1>Notifications</h1>
+        <h1 class="headdisplay"></h1>
+        <h3></h3>
+    </div>
+
+    <div class="newnotimarquee">
+        <marquee   behavior="scroll" direction="up" scrollamount="0" id="scrolling-text"  class="newnotidisplaymarquee">
+               
+        </marquee>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>Copyright © 2024 - thehtdtechnologies.com - All Rights Reserved</p>
+            <p>Designed and Hosted by <a href="/" >thehtdtechnologies.com</a></p>
+
+</footer>
+
+
+
+</div>
+<!--
+<div class="container">
+    <ul>
+        <a href="courses.html"><li class="cb1">DNB BROAD SPECIALITY</li></a>
+        <a href="courses.html"> <li class="cb2">M.B.B.S / B.D.S</li></a>
+        <a href="courses.html"><li class="cb3">M.P.T</li></a>
+        <a href="courses.html"><li class="cb4">M.PHARMACY</li></a>
+        <a href="courses.html"><li class="cb5">M.Phil ( CLINICAL SOCIAL WORK )</li></a>
+        <a href="courses.html"><li class="cb6">M.PHIL CLINICAL PSYCHOLOGY</li></a>
+        <a href="courses.html"> <li class="cb7">M.Sc., MOLECULAR VIROLOGY</li></a>
+        <a href="courses.html"> <li class="cb8">M.Sc., NURSING</li></a>
+        <a href="courses.html"> <li class="cb9">NURSING FOR WOMEN ( DGNM )</li></a>
+        <a href="courses.html"> <li class="cb10">PARAMEDICAL CERTIFICATE / DIPLOMA COURSES</li></a>
+        <a href="courses.html"> <li class="cb11">PARAMEDICAL DEGREE COURSES</li></a>
+        <a href="courses.html"><li class="cb12">PHARM.D</li></a>
+        <a href="courses.html"><li class="cb13">PHARMACY ( DIPLOMA IN PHARMACY )</li></a>
+        <a href="courses.html"> <li class="cb14">PHARMACY ( B.PHARM LATERAL ENTRY )</li></a>
+        <a href="courses.html"><li class="cb15">POST BASIC B.Sc., NURSING</li></a>
+        <a href="courses.html"> <li class="cb16">POST DOCTORAL FELLOWSHIP IN GYNAEC-ONCOLOGY</li></a>
+        <a href="courses.html"><li class="cb17">POST DOCTORAL FELLOWSHIP IN MAS</li></a>
+        <a href="courses.html"><li class="cb18">POST GRADUATE - DENTAL COURSES</li></a>
+        <a href="courses.html"> <li class="cb19">POST GRADUATE - MEDICAL COURSES</li></a>
+        <a href="courses.html"> <li class="cb20"> SUPER SPECIALITY COURSES</li></a>
+    </ul>
+</div>
+   
+-->
+<!--
+<script>
+    // JAVASCRIPT CODE FOR DISPLAYING MARQUEE //
+
+const marquee= document.getElementById("scrolling-text")
+
+marquee.addEventListener('mouseover',() =>{
+    marquee.stop();
+})
+
+marquee.addEventListener('mouseout',() =>{
+    marquee.start();
+})
+
+
+
+
+
+
+
+// JAVASCRIPT CODE FOR COURSES 
+
+
+// pg medical courses
+
+
+const buttpg = document.getElementById("buttpg")
+const showpg = document.getElementById("showpg")
+const divpg =document.getElementById("divpg")
+
+
+buttpg.addEventListener('mouseover',()=>{
+    showpg.style.display="block";
+    showpg.style.animation = "slideUp 0.75s forwards";
+})
+
+showpg.addEventListener('mouseover',()=>{
+    showpg.style.display="block";
+    showpg.style.animation = "slideUp 0.75s forwards";
+})
+
+divpg.addEventListener('mouseout',()=>{
+    showpg.style.display="none";   
+})
+
+
+// pg paramedical courses
+
+const buttpgpara = document.getElementById("buttpgpara")
+const showpgpara = document.getElementById("showpgpara")
+const divpgpara =document.getElementById("divpgpara")
+
+
+buttpgpara.addEventListener('mouseover',()=>{
+    showpgpara.style.display="block";
+    showpgpara.style.animation = "slideUp 0.75s forwards";
+})
+
+showpgpara.addEventListener('mouseover',()=>{
+    showpgpara.style.display="block";
+    showpgpara.style.animation = "slideUp 0.75s forwards";
+})
+
+divpgpara.addEventListener('mouseout',()=>{
+    showpgpara.style.display="none";   
+})
+
+
+// ug courses
+
+const buttug = document.getElementById("buttug")
+const showug = document.getElementById("showug")
+const divug =document.getElementById("divug")
+
+
+buttug.addEventListener('mouseover',()=>{
+    showug.style.display="block";
+    showug.style.animation = "slideUp 0.75s forwards";
+})
+
+showug.addEventListener('mouseover',()=>{
+    showug.style.display="block";
+    showug.style.animation = "slideUp 0.75s forwards";
+})
+
+divug.addEventListener('mouseout',()=>{
+    showug.style.display="none";
+  
+    
+})
+
+
+// pmc courses
+
+const buttpmc = document.getElementById("buttpmc")
+const showpmc = document.getElementById("showpmc")
+const divpmc =document.getElementById("divpmc")
+
+
+buttpmc.addEventListener('mouseover',()=>{
+    showpmc.style.display="block";
+    showpmc.style.animation = "slideUp 0.75s forwards";
+})
+
+showpmc.addEventListener('mouseover',()=>{
+    showpmc.style.display="block";
+    showpmc.style.animation = "slideUp 0.75s forwards";
+})
+
+divpmc.addEventListener('mouseout',()=>{
+    showpmc.style.display="none";
+})
+
+
+
+// NEW NOTIFICATION DISPLAY 
+
+
+const newnoti =document.querySelector(".newnoti")
+
+const newnotidisplaymarquee = document.querySelector(".newnotidisplaymarquee")
+
+
+
+/// PG MEDICAL COURSES BUTTONS
+
+const pgbutt1 = document.getElementById("pgbutt1")
+const pgbutt2 = document.getElementById("pgbutt2")
+const pgbutt3 = document.getElementById("pgbutt3")
+const pgbutt4 = document.getElementById("pgbutt4")
+
+
+pgbutt1.addEventListener('click',()=>{ 
+
+    newnoti.style.display="block";
+    showpg.style.display="none";
+    displayButtonName(pgbutt1);
+    newnotidisplaymarquee.innerHTML="<center>THIS IS THE NOTIFICATION FOR PG MEDICAL COURSES - MENU 1 <center/>"
+
+})
+
+pgbutt2.addEventListener('click',()=>{
+  
+    newnoti.style.display="block";
+    showpg.style.display="none";
+    displayButtonName(pgbutt2);
+    newnotidisplaymarquee.innerHTML="<center>THIS IS THE NOTIFICATION FOR PG MEDICAL COURSES - MENU 2 <center/>"
+
+})
+
+pgbutt3.addEventListener('click',()=>{
+
+    newnoti.style.display="block";
+    showpg.style.display="none";
+    displayButtonName(pgbutt3);
+    newnotidisplaymarquee.innerHTML="<center>THIS IS THE NOTIFICATION FOR PG MEDICAL COURSES - MENU 3 <center/>"  
+
+})
+
+pgbutt4.addEventListener('click',()=>{
+
+    newnoti.style.display="block";
+    showpg.style.display="none";
+    displayButtonName(pgbutt4);
+    newnotidisplaymarquee.innerHTML="<center>THIS IS THE NOTIFICATION FOR PG MEDICAL COURSES - MENU 4 <center/>"
+
+})
+
+
+/// PG PARAMEDICAL COURSES BUTTONS
+
+const pgparabutt1 = document.getElementById("pgparabutt1")
+const pgparabutt2 = document.getElementById("pgparabutt2")
+const pgparabutt3 = document.getElementById("pgparabutt3")
+const pgparabutt4 = document.getElementById("pgparabutt4")
+
+
+
+// UG MEDICAL COURSES BUTTONS
+
+const ugbutt1 = document.getElementById("ugbutt1")
+const ugbutt2 = document.getElementById("ugbutt2")
+const ugbutt3 = document.getElementById("ugbutt3")
+const ugbutt4 = document.getElementById("ugbutt4")
+
+ugbutt1.addEventListener('click',()=>{
+    
+    newnoti.style.display="block";
+    showug.style.display="none";
+    displayButtonName(ugbutt1);
+    newnotidisplaymarquee.innerHTML="<center>THIS IS THE NOTIFICATION FOR UG MEDICAL COURSES - MENU 1 <center/>"
+
+})
+
+ugbutt2.addEventListener('click',()=>{
+    
+    newnoti.style.display="block";
+    showug.style.display="none";
+    displayButtonName(ugbutt2);
+    newnotidisplaymarquee.innerHTML="<center>THIS IS THE NOTIFICATION FOR UG MEDICAL COURSES - MENU 2 <center/>"
+
+})
+
+ugbutt3.addEventListener('click',()=>{
+    
+    newnoti.style.display="block";
+    showug.style.display="none";
+    displayButtonName(ugbutt3);
+    newnotidisplaymarquee.innerHTML="<center>THIS IS THE NOTIFICATION FOR UG MEDICAL COURSES - MENU 3 <center/>"
+
+})
+
+ugbutt4.addEventListener('click',()=>{
+    
+    newnoti.style.display="block";
+    showug.style.display="none";
+    displayButtonName(ugbutt4);
+    newnotidisplaymarquee.innerHTML="<center>THIS IS THE NOTIFICATION FOR UG MEDICAL COURSES - MENU 4 <center/>"
+
+})
+
+
+
+// PAPAMEDICAL COURSES 
+
+const pmcbutt1 = document.getElementById("pmcbutt1")
+const pmcutt2 = document.getElementById("pmcbutt2")
+const pmcbutt3 = document.getElementById("pmcbutt3")
+const pmcbutt4 = document.getElementById("pmcbutt4")
+
+
+
+
+pmcbutt1.addEventListener('click',()=>{
+   
+    newnoti.style.display="block";
+    showpmc.style.display="none";
+    displayButtonName(pmcbutt1);
+    newnotidisplaymarquee.innerHTML= "<center>THIS IS THE NOTIFICATION FOR PARAMEDICAL COURSES - MENU 1 <center/>"
+   
+
+})
+
+pmcbutt2.addEventListener('click',()=>{
+   
+    newnoti.style.display="block";
+    showpmc.style.display="none";
+    displayButtonName(pmcbutt2);
+    newnotidisplaymarquee.innerHTML="<center>THIS IS THE NOTIFICATION FOR PARAMEDICAL COURSES - MENU 2 <center/>"
+
+})
+
+pmcbutt3.addEventListener('click',()=>{
+   
+    newnoti.style.display="block";
+    showpmc.style.display="none";
+    displayButtonName(pmcbutt3);
+    newnotidisplaymarquee.innerHTML="<center>THIS IS THE NOTIFICATION FOR PARAMEDICAL COURSES - MENU 3 <center/>"
+
+})
+
+pmcbutt4.addEventListener('click',()=>{
+   
+    newnoti.style.display="block";
+    showpmc.style.display="none";
+    displayButtonName(pmcbutt4);
+    newnotidisplaymarquee.innerHTML="<center>THIS IS THE NOTIFICATION FOR PARAMEDICAL COURSES - MENU 4 <center/>"
+
+})
+
+
+
+
+// DISPLAYING BUTTON NAME ON THE HEADING 
+    
+function displayButtonName(button) {
+    const headdisplay = document.querySelector('.headdisplay');
+    headdisplay.innerHTML = ` ${button.innerHTML}`;
+}
+</script>
+-->
+<script>
+
+
+const marquee= document.getElementById("scrolling-text")
+
+marquee.addEventListener('mouseover',() =>{
+    marquee.stop();
+})
+
+marquee.addEventListener('mouseout',() =>{
+    marquee.start();
+})
+
+
+$(document).ready(function() {
+    $('#buttpmc').click(function() {
+        $('#showpmc').toggle();
+    });
+});
+
+$(document).ready(function() {
+    $('#buttpg').click(function() {
+        $('#showpg').toggle();
+    });
+});
+
+$(document).ready(function() {
+    $('#buttpgpara').click(function() {
+        $('#showpgpara').toggle();
+    });
+});
+
+$(document).ready(function() {
+    $('#buttug').click(function() {
+        $('#showug').toggle();
+    });
+});
+
+
+/// PG
+const buttpg = document.getElementById("buttpg")
+const showpg = document.getElementById("showpg")
+const divpg =document.getElementById("divpg")
+/// PG PARA
+const buttpgpara = document.getElementById("buttpgpara")
+const showpgpara = document.getElementById("showpgpara")
+const divpgpara =document.getElementById("divpgpara")
+/// UG 
+const buttug = document.getElementById("buttug")
+const showug = document.getElementById("showug")
+const divug =document.getElementById("divug")
+/// PMC
+const buttpmc = document.getElementById("buttpmc")
+const showpmc = document.getElementById("showpmc")
+const divpmc =document.getElementById("divpmc")
+
+// displaying none other menus while clicking one buttons 
+
+buttpg.addEventListener('click',()=>{
+    showpgpara.style.display="none";
+    showug.style.display="none";
+    showpmc.style.display="none";
+})
+
+buttpgpara.addEventListener('click',()=>{
+    showpg.style.display="none";
+    showug.style.display="none";
+    showpmc.style.display="none";
+})
+
+buttug.addEventListener('click',()=>{
+    showpg.style.display="none";
+    showpgpara.style.display="none";
+    showpmc.style.display="none";
+})
+
+buttpmc.addEventListener('click',()=>{
+    showpg.style.display="none";
+    showpgpara.style.display="none";
+    showug.style.display="none";
+})
+
+
+
+
+
+
+
+/// PG BUTTONS SELECTING
+const pgbutt1 = document.getElementById("pgbutt1")
+const pgbutt2 = document.getElementById("pgbutt2")
+const pgbutt3 = document.getElementById("pgbutt3")
+const pgbutt4 = document.getElementById("pgbutt4")
+
+/// PG PARA BUTTONS SELECTING
+const pgparabutt1 = document.getElementById("pgparabutt1")
+const pgparabutt2 = document.getElementById("pgparabutt2")
+const pgparabutt3 = document.getElementById("pgparabutt3")
+const pgparabutt4 = document.getElementById("pgparabutt4")
+
+/// UG BUTTONS SELECTING
+const ugbutt1 = document.getElementById("ugbutt1")
+const ugbutt2 = document.getElementById("ugbutt2")
+const ugbutt3 = document.getElementById("ugbutt3")
+const ugbutt4 = document.getElementById("ugbutt4")
+
+/// PMC BUTTONS SELECTING
+const pmcbutt1 = document.getElementById("pmcbutt1")
+const pmcbutt2 = document.getElementById("pmcbutt2")
+const pmcbutt3 = document.getElementById("pmcbutt3")
+const pmcbutt4 = document.getElementById("pmcbutt4")
+
+function displayButtonName(button) {
+    const headdisplay = document.querySelector('.headdisplay');
+    headdisplay.innerHTML = ` ${button.innerHTML}`;
+}
+
+/// NOTIFICATIONS DISPLAY
+const newnoti =document.querySelector(".newnoti")
+
+const newnotidisplaymarquee = document.querySelector(".newnotidisplaymarquee")
+
+///// PG BUTTONS MENU
+
+pgbutt1.addEventListener('click',()=>{ 
+
+    newnoti.style.display="block";
+    showpg.style.display="none";
+    showpgpara.style.display="none";
+    showug.style.display="none";
+    showpmc.style.display="none";
+    displayButtonName(pgbutt1);
+    newnotidisplaymarquee.innerHTML="<center>THIS IS THE NOTIFICATION FOR PG MEDICAL COURSES - MENU 1 <center/>"
+
+})
+
+pgbutt2.addEventListener('click',()=>{
+  
+    newnoti.style.display="block";
+    showpg.style.display="none";
+    showpgpara.style.display="none";
+    showug.style.display="none";
+    showpmc.style.display="none";
+    displayButtonName(pgbutt2);
+    newnotidisplaymarquee.innerHTML="<center>THIS IS THE NOTIFICATION FOR PG MEDICAL COURSES - MENU 2 <center/>"
+
+})
+
+pgbutt3.addEventListener('click',()=>{
+
+    newnoti.style.display="block";
+    showpg.style.display="none";
+    showpgpara.style.display="none";
+    showug.style.display="none";
+    showpmc.style.display="none";
+    displayButtonName(pgbutt3);
+    newnotidisplaymarquee.innerHTML="<center>THIS IS THE NOTIFICATION FOR PG MEDICAL COURSES - MENU 3 <center/>"  
+
+})
+
+pgbutt4.addEventListener('click',()=>{
+
+newnoti.style.display="block";
+showpg.style.display="none";
+showpgpara.style.display="none";
+    showug.style.display="none";
+    showpmc.style.display="none";
+displayButtonName(pgbutt4);
+newnotidisplaymarquee.innerHTML="<center>THIS IS THE NOTIFICATION FOR PG MEDICAL COURSES - MENU 4 <center/>"
+
+})
+
+/// PG PARA BUTTONS MENU
+
+pgparabutt1.addEventListener('click',()=>{ 
+
+newnoti.style.display="block";
+showpg.style.display="none";
+showpgpara.style.display="none";
+showug.style.display="none";
+showpmc.style.display="none";
+displayButtonName(pgparabutt1);
+newnotidisplaymarquee.innerHTML="<center>THIS IS THE NOTIFICATION FOR PG PARAMEDICAL COURSES - MENU 1 <center/>"
+
+})
+
+pgparabutt2.addEventListener('click',()=>{
+
+newnoti.style.display="block";
+showpg.style.display="none";
+showpgpara.style.display="none";
+showug.style.display="none";
+showpmc.style.display="none";
+displayButtonName(pgparabutt2);
+newnotidisplaymarquee.innerHTML="<center>THIS IS THE NOTIFICATION FOR PG PARAMEDICAL COURSES - MENU 2 <center/>"
+
+})
+
+pgparabutt3.addEventListener('click',()=>{
+
+newnoti.style.display="block";
+showpg.style.display="none";
+showpgpara.style.display="none";
+showug.style.display="none";
+showpmc.style.display="none";
+displayButtonName(pgparabutt3);
+newnotidisplaymarquee.innerHTML="<center>THIS IS THE NOTIFICATION FOR PG PARAMEDICAL COURSES - MENU 3 <center/>"  
+
+})
+
+pgparabutt4.addEventListener('click',()=>{
+
+newnoti.style.display="block";
+showpg.style.display="none";
+showpgpara.style.display="none";
+showug.style.display="none";
+showpmc.style.display="none";
+displayButtonName(pgparabutt4);
+newnotidisplaymarquee.innerHTML="<center>THIS IS THE NOTIFICATION FOR PG PARAMEDICAL COURSES - MENU 4 <center/>"
+
+})
+
+/// UG BUTTONS MENU
+
+
+ugbutt1.addEventListener('click',()=>{
+    
+    newnoti.style.display="block";
+    showpg.style.display="none";
+    showpgpara.style.display="none";
+   showug.style.display="none";
+   showpmc.style.display="none";
+    displayButtonName(ugbutt1);
+    newnotidisplaymarquee.innerHTML="<center>THIS IS THE NOTIFICATION FOR UG MEDICAL COURSES - MENU 1 <center/>"
+
+})
+
+ugbutt2.addEventListener('click',()=>{
+    
+    newnoti.style.display="block";
+    showpg.style.display="none";
+    showpgpara.style.display="none";
+    showug.style.display="none";
+    showpmc.style.display="none";
+    displayButtonName(ugbutt2);
+    newnotidisplaymarquee.innerHTML="<center>THIS IS THE NOTIFICATION FOR UG MEDICAL COURSES - MENU 2 <center/>"
+
+})
+
+ugbutt3.addEventListener('click',()=>{
+    
+    newnoti.style.display="block";
+    showpg.style.display="none";
+    showpgpara.style.display="none";
+    showug.style.display="none";
+    showpmc.style.display="none";
+    displayButtonName(ugbutt3);
+    newnotidisplaymarquee.innerHTML="<center>THIS IS THE NOTIFICATION FOR UG MEDICAL COURSES - MENU 3 <center/>"
+
+})
+
+ugbutt4.addEventListener('click',()=>{
+    
+    newnoti.style.display="block";
+    showpg.style.display="none";
+    showpgpara.style.display="none";
+    showug.style.display="none";
+    showpmc.style.display="none";
+    displayButtonName(ugbutt4);
+    newnotidisplaymarquee.innerHTML="<center>THIS IS THE NOTIFICATION FOR UG MEDICAL COURSES - MENU 4 <center/>"
+
+})
+
+
+/// PARAMEDICAL BUTTONS MENU
+
+
+pmcbutt1.addEventListener('click',()=>{
+    
+    newnoti.style.display="block";
+    showpg.style.display="none";
+    showpgpara.style.display="none";
+   showug.style.display="none";
+   showpmc.style.display="none";
+    displayButtonName(pmcbutt1);
+    newnotidisplaymarquee.innerHTML="<center>THIS IS THE NOTIFICATION FOR PARAMEDICAL COURSES - MENU 1 <center/>"
+
+})
+
+pmcbutt2.addEventListener('click',()=>{
+    
+    newnoti.style.display="block";
+    showpg.style.display="none";
+    showpgpara.style.display="none";
+    showug.style.display="none";
+    showpmc.style.display="none";
+    displayButtonName(pmcbutt2);
+    newnotidisplaymarquee.innerHTML="<center>THIS IS THE NOTIFICATION FOR PARAMEDICAL COURSES - MENU 2 <center/>"
+
+})
+
+pmcbutt3.addEventListener('click',()=>{
+    
+    newnoti.style.display="block";
+    showpg.style.display="none";
+    showpgpara.style.display="none";
+    showug.style.display="none";
+    showpmc.style.display="none";
+    displayButtonName(pmcbutt3);
+    newnotidisplaymarquee.innerHTML="<center>THIS IS THE NOTIFICATION FOR PARAMEDICAL COURSES - MENU 3 <center/>"
+
+})
+
+pmcbutt4.addEventListener('click',()=>{
+    
+    newnoti.style.display="block";
+    showpg.style.display="none";
+    showpgpara.style.display="none";
+    showug.style.display="none";
+    showpmc.style.display="none";
+    displayButtonName(pmcbutt4);
+    newnotidisplaymarquee.innerHTML="<center>THIS IS THE NOTIFICATION FOR PARAMEDICAL COURSES - MENU 4 <center/>"
+
+})
+
+</script>
+</body>
+</html>

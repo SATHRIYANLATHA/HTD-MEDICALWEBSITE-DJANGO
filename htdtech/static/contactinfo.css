@@ -1,0 +1,235 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+
+.overall{
+    z-index: 0;
+    position: absolute;
+}
+
+.container{
+    z-index:1;
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;;
+    width:400px;
+    height:450px;
+    margin-left: 215px;
+    margin-top: 145px;
+}
+
+.container{
+    display:none;
+}
+
+.container ul {
+   list-style: none;
+   padding-left: 20px;
+   padding-right:10px;
+   font-size:14px;
+   
+}
+.container a{
+    text-decoration: none;
+}
+.container li:hover{
+    background-color: #e7e7e7;
+}
+
+
+body{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+
+/* HEADER STYLING */
+
+.header{
+    background-color: darkslategray;
+    width: 100%;
+    height:90px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.header img{
+     height:80px;
+     width:80px;
+     margin-left:20px;
+     border-radius: 15px;
+     box-shadow: 10px 5px 5px darkslategray;
+     padding-top: 5px;
+     padding-left:0%;
+
+}
+
+.header-title h1,h2{
+    color:white;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.header-title h1{
+    text-align: center;
+}
+
+
+
+/* NAVBAR STYLING */
+
+.navbar1{
+    background-color: white;
+}
+
+.navbar2 ul{
+    width:98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+    font-weight: bold;
+}
+
+.navbar2 ul{
+    padding-left: 10px;
+}
+
+
+.navbar2 a {
+    text-decoration: none;
+    color: darkgray; /* Very light gray color for text */
+    font-size: small;
+}
+
+li.blong {
+    background-color: #e7e7e7;
+    padding: 15px; /* Adjust as needed */
+    margin: 0; /* Reset margins if necessary */
+    display: block; /* Ensure it behaves as a block element */
+}
+
+
+/* Add hover effect for better visibility */
+.navbar2 a:hover {
+    color: #000000; /* Black color on hover */
+}
+
+
+/* MARQUEE STYLING */
+
+marquee{
+    border-style: solid;
+   border-width: 0.1px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   width: 100vw;
+}
+
+marquee a{
+    text-decoration: none;
+    color:blue;
+    font-weight: bold;
+}
+
+marquee a:hover{
+    text-decoration: underline;
+    
+}
+
+
+/* FOOTER STYLING */
+
+footer{
+    background-color: black;
+    width:100%;
+    height: 60px;
+}
+
+footer p{
+    color:white;
+    text-align: center;
+    padding-top: 5px;
+    font-size: small;
+}
+
+
+footer a{
+    text-decoration: none;
+    color:lightblue
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+.archive-table {
+    width: 95%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+    text-align: left;
+    position: relative;
+    margin-left: 15px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.archive-table thead, .archive-table tfoot {
+    position: sticky;
+    top: 0;
+    background-color: rgb(42, 42, 190);
+    z-index: 1;
+}
+
+.archive-table th, .archive-table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+}
+
+.archive-table th {
+    background-color: darkslategray;
+    color:white;
+    text-align: center;
+}
+
+.archive-table tbody tr:nth-child(even) {
+    background-color: #ecf9f2;/* Light blue for even rows */
+}
+
+.archive-table tbody tr:nth-child(odd) {
+    background-color: #f1f1f1;  /* White for odd rows */
+}
+
+
+.officialaddress{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+
+.official{
+    width:56%;
+}
+
+.official table{
+    margin-top: 0%;
+}
+
+.address{
+    margin-top: 40px;
+}
+
+.address h1{
+    color: brown;
+    font-style: italic;
+}
+.address p{
+    font-size: 16px;
+}
