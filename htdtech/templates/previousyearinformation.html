@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="shortcut icon" href="pictures/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'previousyearinformation.css' %}">
-    <script src="script.js" defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
 <div class="overall">
@@ -92,55 +90,242 @@
 
 </div>
 
+ <!-- Form for selecting academic year -->
 
-<div class="form">
-    <h4>
-        Select Academic Year
-    </h4>
-    <select id="selection" name="year">
-        <option value="2023 - 2024" selected>2023 - 2024</option>
-        <option value="2022 - 2023">2022 - 2023</option>
-        <option value="2021 - 2022">2021 - 2022</option>
-        <option value="2020 - 2021">2020 - 2021</option>
-        <option value="2019 - 2020">2019 - 2020</option>
-        <option value="2018 - 2019">2018 - 2019</option>
-        <option value="2017 - 2018">2017 - 2018</option>
-        <option value="2016 - 2017">2016 - 2017</option>
-        <option value="2015 - 2016">2015 - 2016</option>
-        <option value="2014 - 2015">2014 - 2015</option>
-        <option value="2013 - 2014">2013 - 2014</option>
-        <option value="2012 - 2013">2012 - 2013</option>
-        <option value="2011 - 2012">2011 - 2012</option>
-        <option value="2010 - 2011">2010 - 2011</option>
-        <option value="2009 - 2010">2009 - 2010</option>
-        <option value="2008 - 2009">2008 - 2009</option>
-        <option value="2007 - 2008">2007 - 2008</option>
-        <option value="2006 - 2007">2006 - 2007</option>
-        <option value="2005 - 2006">2005 - 2006</option>
-        <option value="2004 - 2005">2004 - 2005</option>
-        <option value="2003 - 2004">2003 - 2004</option>
-        <option value="2002 - 2003">2002 - 2003</option>
-        <option value="2001 - 2002">2001 - 2002</option>
-        <option value="2000 - 2001">2000 - 2001</option>
-        <option value="1999 - 2000">1999 - 2000</option>
-        <option value="1998 - 1999">1998 - 1999</option>
-        <option value="1997 - 1998">1997 - 1998</option>
-        <option value="1996 - 1997">1996 - 1997</option>
-        <option value="1995 - 1996">1995 - 1996</option>
-        <option value="1994 - 1995">1994 - 1995</option>
-        <option value="1993 - 1994">1993 - 1994</option>
-        <option value="1992 - 1993">1992 - 1993</option>
-        <option value="1991 - 1992">1991 - 1992</option>
-        <option value="1990 - 1991">1990 - 1991</option>
-        <option value="1989 - 1990">1989 - 1990</option>
-        <option value="1988 - 1989">1988 - 1989</option>
-        <option value="1987 - 1988">1987 - 1988</option>
-        <option value="1986 - 1987">1986 - 1987</option>
-        <option value="1985 - 1986">1985 - 1986</option>
-        <option value="1984 - 1985">1984 - 1985</option>
+ <form method="GET" action="">
+    <label for="year"><h3 style="padding-left:15px;">Select Academic Year:</h3></label>
+    <select name="year" id="selection" onchange="this.form.submit()">
+        <option value="2023 - 2024" {% if selected_year == '2023 - 2024' %}selected{% endif %}>2023 - 2024</option>
+        <option value="2022 - 2023" {% if selected_year == '2022 - 2023' %}selected{% endif %}>2022 - 2023</option>
+        <option value="2021 - 2022" {% if selected_year == '2021 - 2022' %}selected{% endif %}>2021 - 2022</option>
+        <option value="2020 - 2021" {% if selected_year == '2020 - 2021' %}selected{% endif %}>2020 - 2021</option>
+        <option value="2019 - 2020" {% if selected_year == '2019 - 2020' %}selected{% endif %}>2019 - 2020</option>
+        <option value="2018 - 2019" {% if selected_year == '2018 - 2019' %}selected{% endif %}>2018 - 2019</option>
+        <option value="2017 - 2018" {% if selected_year == '2017 - 2018' %}selected{% endif %}>2017 - 2018</option>
+        <option value="2016 - 2017" {% if selected_year == '2016 - 2017' %}selected{% endif %}>2016 - 2017</option>
+        <option value="2015 - 2016" {% if selected_year == '2015 - 2016' %}selected{% endif %}>2015 - 2016</option>
+        <option value="2014 - 2015" {% if selected_year == '2014 - 2015' %}selected{% endif %}>2014 - 2015</option>
+        <option value="2013 - 2014" {% if selected_year == '2013 - 2014' %}selected{% endif %}>2013 - 2014</option>
+        <option value="2012 - 2013" {% if selected_year == '2012 - 2013' %}selected{% endif %}>2012 - 2013</option>
+        <option value="2011 - 2012" {% if selected_year == '2011 - 2012' %}selected{% endif %}>2011 - 2012</option>
+        <option value="2010 - 2011" {% if selected_year == '2010 - 2011' %}selected{% endif %}>2010 - 2011</option>
+        <option value="2009 - 2010" {% if selected_year == '2009 - 2010' %}selected{% endif %}>2009 - 2010</option>
+        <option value="2008 - 2009" {% if selected_year == '2008 - 2009' %}selected{% endif %}>2008 - 2009</option>
+        <option value="2007 - 2008" {% if selected_year == '2007 - 2008' %}selected{% endif %}>2007 - 2008</option>
+        <option value="2006 - 2007" {% if selected_year == '2006 - 2007' %}selected{% endif %}>2006 - 2007</option>
+        <option value="2005 - 2006" {% if selected_year == '2005 - 2006' %}selected{% endif %}>2005 - 2006</option>
+        <option value="2004 - 2005" {% if selected_year == '2004 - 2005' %}selected{% endif %}>2004 - 2005</option>
+        <option value="2003 - 2004" {% if selected_year == '2003 - 2004' %}selected{% endif %}>2003 - 2004</option>
+        <option value="2002 - 2003" {% if selected_year == '2002 - 2003' %}selected{% endif %}>2002 - 2003</option>
+        <option value="2001 - 2002" {% if selected_year == '2001 - 2002' %}selected{% endif %}>2001 - 2002</option>
+        <option value="2000 - 2001" {% if selected_year == '2000 - 2001' %}selected{% endif %}>2000 - 2001</option>
+        <option value="1999 - 2000" {% if selected_year == '1999 - 2000' %}selected{% endif %}>1999 - 2000</option>
+        <option value="1998 - 1999" {% if selected_year == '1998 - 1999' %}selected{% endif %}>1998 - 1999</option>
+        <option value="1997 - 1998" {% if selected_year == '1997 - 1998' %}selected{% endif %}>1997 - 1998</option>
+        <option value="1996 - 1997" {% if selected_year == '1996 - 1997' %}selected{% endif %}>1996 - 1997</option>
+        <option value="1995 - 1996" {% if selected_year == '1995 - 1996' %}selected{% endif %}>1995 - 1996</option>
+        <option value="1994 - 1995" {% if selected_year == '1994 - 1995' %}selected{% endif %}>1994 - 1995</option>
+        <option value="1993 - 1994" {% if selected_year == '1993 - 1994' %}selected{% endif %}>1993 - 1994</option>
+        <option value="1992 - 1993" {% if selected_year == '1992 - 1993' %}selected{% endif %}>1992 - 1993</option>
+        <option value="1991 - 1992" {% if selected_year == '1991 - 1992' %}selected{% endif %}>1991 - 1992</option>
+        <option value="1990 - 1991" {% if selected_year == '1990 - 1991' %}selected{% endif %}>1990 - 1991</option>
+        <option value="1989 - 1990" {% if selected_year == '1989 - 1990' %}selected{% endif %}>1989 - 1990</option>
+        <option value="1988 - 1989" {% if selected_year == '1988 - 1989' %}selected{% endif %}>1988 - 1989</option>
+        <option value="1987 - 1988" {% if selected_year == '1987 - 1988' %}selected{% endif %}>1987 - 1988</option>
+        <option value="1986 - 1987" {% if selected_year == '1986 - 1987' %}selected{% endif %}>1986 - 1987</option>
+        <option value="1985 - 1986" {% if selected_year == '1985 - 1986' %}selected{% endif %}>1985 - 1986</option>
+        <option value="1984 - 1985" {% if selected_year == '1984 - 1985' %}selected{% endif %}>1984 - 1985</option>
+        
     </select>
-    
+</form>
+
+
+
+<div class="pdf-download">
+    <a href="#"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a> -- Download
 </div>
+
+
+<div>
+ 
+
+    <table class="archive-table" id="table1">
+        <thead>
+            <tr>
+                <th>SL.NO</th>
+                <th>SESSION</th>
+                <th>COURSE</th>
+                <th>PROSPECTUS</th>
+                <th>MERIT LIST</th>
+                <th>SCHEDULE</th>
+                <th>ALLOTTED LIST </th>
+                <th>AMENDMENTS</th>
+                <th>CUT OFF</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            {% for data in datas %}
+            <tr>
+                <td>{{data.serialno}}</td>
+                <td>{{data.session}}</td>
+                <td>{{data.course}}</td>
+
+                <!--   PROSPECTUS   -->
+
+                <td >
+                    {% if data.prospectus %}
+                        <a href="{{ data.prospectus }}" class="center" target="_blank"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a>
+                    {% else %}
+                        <p></p>
+                    {% endif %}
+                </td>
+
+
+
+                 <!--   MERIT LIST   -->
+
+                 <td >
+                    {% if data.meritlist %}
+                        <a href="{{ data.meritlist }}" class="center" target="_blank"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a>
+                    {% else %}
+                        <p></p>
+                    {% endif %}
+                </td>
+
+
+
+                 <!--   SCHEDULE   -->
+
+                 <td >
+                    {% if data.schedule %}
+                        <a href="{{ data.schedule }}" class="center" target="_blank"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a>
+                    {% else %}
+                        <p></p>
+                    {% endif %}
+                </td>
+
+
+
+
+                 <!--   ALLOTTED LIST   -->
+
+                 <td >
+                    {% if data.allottedlist %}
+                        <a href="{{ data.allottedlist }}" class="center" target="_blank"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a>
+                    {% else %}
+                        <p></p>
+                    {% endif %}
+                </td>
+
+
+
+
+                 <!--   AMENDMENTS   -->
+
+                 <td >
+                    {% if data.amendments %}
+                        <a href="{{ data.amendments}}" class="center" target="_blank"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a>
+                    {% else %}
+                        <p></p>
+                    {% endif %}
+                </td>
+
+
+
+
+                 <!--   CUT OFF   -->
+
+                 <td >
+                    {% if data.cutoff %}
+                        <a href="{{ data.cutoff }}" class="center" target="_blank"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a>
+                    {% else %}
+                        <p></p>
+                    {% endif %}
+                </td>
+
+
+            </tr>
+
+            {% endfor %}
+
+        </tbody>
+        
+        
+    </table>
+
+</div>
+
+
+{% comment %} <td class="center"> <a href="#" target="_blank"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+<td></td>
+<td class="center"> <a href="#" target="_blank"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+<td></td>
+<td></td>
+<td></td> {% endcomment %}
+
+
+
+<footer>
+    <p>Copyright © 2024 - thehtdtechnologies.com - All Rights Reserved</p>
+            <p>Designed and Hosted by <a href="/" >thehtdtechnologies.com</a></p>
+
+</footer>
+
+
+
+</div>
+
+<script>
+
+
+    <!-- use JAVASCRIPT code here....!-->
+
+
+
+const marquee= document.getElementById("scrolling-text")
+
+marquee.addEventListener('mouseover',() =>{
+marquee.stop();
+})
+
+marquee.addEventListener('mouseout',() =>{
+marquee.start();
+})
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  FAILURE BY CREATING ALL IN ONE TABLE   -->
+
+
+  
+{% comment %} <form id="yearForm" method="GET" action="" >
+    <h3>Select Academic Year </h3>
+    <select name="year" id="selection" onchange="document.getElementById('yearForm').submit()"  >
+        <option value="2023 - 2024" {% if selected_year == '2023 - 2024' %}selected{% endif %}>2023 - 2024</option>
+        <option value="2022 - 2023" {% if selected_year == '2022 - 2023' %}selected{% endif %}>2022 - 2023</option>
+        <option value="2021 - 2022" {% if selected_year == '2021 - 2022' %}selected{% endif %}>2021 - 2022</option>
+        <option value="2020 - 2021" {% if selected_year == '2020 - 2021' %}selected{% endif %}>2020 - 2021</option>
+    </select>
+</form>
+
 
 
 <div class="pdf-download">
@@ -166,301 +351,108 @@
             </tr>
         </thead>
         <tbody>
+            {% for info in infos %}
             <tr>
-                <td>1</td>
-                <td>2023-2024</td>
-                <td>SUPER SPECIALITY COURSES</td>
-                <td class="center"> <a href="#" target="_blank"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td class="center"> <a href="#" target="_blank"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{{info.sno}}</td>
+                <td>{{info.session}}</td>
+                <td>{{info.course}}</td>
+
+                <!--   PROSPECTUS   -->
+
+                <td >
+                    {% if info.prospectus %}
+                        <a href="{{ info.prospectus.url }}" class="center"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a>
+                    {% else %}
+                        <p></p>
+                    {% endif %}
+                </td>
+
+
+
+                 <!--   MERIT LIST   -->
+
+                 <td >
+                    {% if info.meritlist %}
+                        <a href="{{ info.meritlist.url }}" class="center"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a>
+                    {% else %}
+                        <p></p>
+                    {% endif %}
+                </td>
+
+
+
+                 <!--   SCHEDULE   -->
+
+                 <td >
+                    {% if info.schedule %}
+                        <a href="{{ info.schedule.url }}" class="center"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a>
+                    {% else %}
+                        <p></p>
+                    {% endif %}
+                </td>
+
+
+
+
+                 <!--   ALLOTTED LIST   -->
+
+                 <td >
+                    {% if info.allottedlist %}
+                        <a href="{{ info.allottedlist.url }}" class="center"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a>
+                    {% else %}
+                        <p></p>
+                    {% endif %}
+                </td>
+
+
+
+
+                 <!--   AMENDMENTS   -->
+
+                 <td >
+                    {% if info.amendments %}
+                        <a href="{{ info.amendments.url }}" class="center"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a>
+                    {% else %}
+                        <p></p>
+                    {% endif %}
+                </td>
+
+
+
+
+                 <!--   CUT OFF   -->
+
+                 <td >
+                    {% if info.cutoff %}
+                        <a href="{{ info.cutoff.url }}" class="center"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a>
+                    {% else %}
+                        <p></p>
+                    {% endif %}
+                </td>
+
+
             </tr>
+
+
+            {% empty %}
             <tr>
-                <td>2</td>
-                <td>2023-2024</td>
-                <td>M.B.B.S/B.D.S</td>
-                <td class="center"> <a href="#" target="_blank"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td class="center"> <a href="#" target="_blank"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td colspan="12" >No details available</td>
             </tr>
-            <tr>
-                <td>3</td>
-                <td>2023-2024</td>
-                <td>M.P.T.</td>
-                <td class="center"> <a  href="#" target="_blank"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td class="center"> <a href="#" target="_blank" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>2023-2024</td>
-                <td>M.PHARMACY</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>2023-2024</td>
-                <td>M.Phil (CLINICAL SOCIAL WORK )</td>
-                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td class="center"> <a href="#"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>2023-2024</td>
-                <td>M.PHIL CLINICAL PSYCHOLOGY</td>
-                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>2023-2024</td>
-                <td>M.Sc., MOLECULAR VIROLOGY</td>
-                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>2023-2024</td>
-                <td>M.Sc., NURSING</td>
-                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>2023-2024</td>
-                <td>NURSING FOR WOMEN(DGNM)</td>
-                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>2023-2024</td>
-                <td>PARAMEDICAL CERTIFICATE/ DIPLOMA COURSES</td>
-                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>11</td>
-                <td>2023-2024</td>
-                <td>PARAMEDICAL DEGREE COURSES</td>
-                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>12</td>
-                <td>2023-2024</td>
-                <td>	PHARM.D</td>
-                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td class="center"> <a href="#"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>13</td>
-                <td>2023-2024</td>
-                <td>PHARMACY( DIPLOMA IN PHARMACY)</td>
-                <td class="center"> <a href="#"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>14</td>
-                <td>2023-2024</td>
-                <td>PHARMACY(B.PHARM LATERAL ENTRY)</td>
-                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>15</td>
-                <td>2023-2024</td>
-                <td>POST BASIC B.Sc., NURSING</td>
-                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td class="center"> <a href="#"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>16</td>
-                <td>2023-2024</td>
-                <td>POST DOCTORAL FELLOWSHIP IN GYNAEC-ONCOLOGY</td>
-                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>17</td>
-                <td>2023-2024</td>
-                <td>	POST DOCTORAL FELLOWSHIP IN MAS</td>
-                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>18</td>
-                <td>2023-2024</td>
-                <td>POST GRADUATE - DENTAL COURSES</td>
-                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+
+            {% endfor %}
             
-            <tr>
-                <td>19</td>
-                <td>2023-2024</td>
-                <td>POST GRADUATE - MEDICAL COURSES</td>
-                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>20</td>
-                <td>2023-2024</td>
-                <td>SUPER SPECIALITY COURSES</td>
-                <td class="center"> <a href="#"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td class="center"> <a href="#" ><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
-                <td></td>
-                <td></td>
-                <td></td>
-
-          
-
-            </tr>
         </tbody>
         
     </table>
 
-</div>
+</div> {% endcomment %}
 
 
-
-<footer>
-    <p>Copyright © 2024 - thehtdtechnologies.com - All Rights Reserved</p>
-            <p>Designed and Hosted by <a href="/" >thehtdtechnologies.com</a></p>
-
-</footer>
-
-
-
-</div>
-
-<script>
-
-
-    <!-- use JAVASCRIPT code here....!-->
-
-
-{% comment %} 
-document.getElementById('selection').addEventListener('change', function () {
-    var selectedYear = this.value;
-    var endYear = selectedYear.split(" - ")[1];
-
-    /*
-    var tableRows = document.querySelectorAll('#table1 tbody tr');
-
-    tableRows.forEach(function (row) {
-        row.cells[1].innerText = selectedYear;
-    });
-
-  
-    if (selectedYear="2023-2024"){
-       window.location.href="previousyearinformation.html"
-    }
-    else 
-      */
-    if(selectedYear==="2023 - 2024"){
-        window.location.href='#'
-    }else{
-        window.location.href = `years/${endYear}.html`;
-    }
-      
-}); {% endcomment %}
-
-
-
-
-
-const marquee= document.getElementById("scrolling-text")
-
-marquee.addEventListener('mouseover',() =>{
-marquee.stop();
-})
-
-marquee.addEventListener('mouseout',() =>{
-marquee.start();
-})
-
-
-
-</script>
-
-</body>
-</html>
-
-
+{% comment %} <td class="center"> <a href="#" target="_blank"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+<td></td>
+<td class="center"> <a href="#" target="_blank"><img src="{% static 'pictures/pdf.png' %}" width="30" height="30"></a></td>
+<td></td>
+<td></td>
+<td></td> {% endcomment %}
 
 
