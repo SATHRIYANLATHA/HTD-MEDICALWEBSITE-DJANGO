@@ -17,10 +17,18 @@ def contact(request):
 def admissionguidelines(request):
     return render(request,'admissionguidelines.html')
 
+def notification(request):
+    return render(request, 'notification.html')
+
 def previousyearinformation(request):
 
+    # for selection - option :
+    years = Session.objects.values_list('session_text', flat=True).distinct() 
+
     # # getting the selection from option:
-    selected_year_text = request.GET.get('year', '2023 - 2024')
+    selected_year_text = request.POST.get('year', '2023 - 2024')
+
+  
 
     
     # {..NOTE ---> REMEMBER SATHRIYAN --->:..session table la irunthu years ah eduthunu vaa first, aproma input la vaanguna selection kooda compare pannu .....:}
@@ -78,7 +86,7 @@ def previousyearinformation(request):
             serialno = serialno + 1
 
 
-    return render(request,'previousyearinformation.html',{'selected_year':selected_year_text, 'datas':datas})
+    return render(request,'previousyearinformation.html',{'selected_year':selected_year_text, 'datas':datas,'years':years})
   
     
     

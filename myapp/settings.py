@@ -25,7 +25,11 @@ SECRET_KEY = 'django-insecure-2kv0m((!p$ym@=70e4ou^vi&hf2z*i$k$)i+i20jjsa#54@k9t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost',
+    '127.0.0.1',
+    '192.168.1.4',
+    'htdtechnologies.pythonanywhere.com',
+     ]
 
 
 # Application definition
@@ -74,16 +78,39 @@ WSGI_APPLICATION = 'myapp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'htdtech',
+#         'USER':'root',
+#         'PASSWORD':'Sathriyan@143',
+#         'HOST':'localhost',
+#         'PORT':'3306'
+#     }
+# }
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'htdtech',
-        'USER':'root',
-        'PASSWORD':'Sathriyan@143',
-        'HOST':'localhost',
-        'PORT':'3306'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME':BASE_DIR/ 'db.sqlite3',
+       
     }
 }
+
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'htdtechnologies$htdtech',  # Updated database name
+#         'USER': 'htdtechnologies',
+#         'PASSWORD': 'Sathriyan@143',
+#         'HOST': 'htdtechnologies.mysql.pythonanywhere-services.com',
+#         'PORT': '3306',
+#     }
+# }
+
 
 
 # Password validation
@@ -120,7 +147,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+import os
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
 STATICFILES_DIRS = [
     "/htdtech/static"
 ]

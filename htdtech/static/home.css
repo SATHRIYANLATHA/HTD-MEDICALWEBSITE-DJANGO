@@ -231,6 +231,7 @@ marquee a:hover{
 .tabletamil{
     display: flex;
     justify-content: space-around;
+    margin-left: 0%;
 }
 
  .table {
@@ -267,7 +268,8 @@ marquee a:hover{
 }
 
 .tamil{
-    margin-top: 70px;
+    margin-top: 100px;
+    margin-left: 20%;
 }
 
 .tamil p{
@@ -276,6 +278,7 @@ marquee a:hover{
 }
 .tamil pre{
     color: grey;
+   
 }
 
 .tamil {

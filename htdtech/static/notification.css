@@ -1,0 +1,226 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+
+.overall{
+    z-index: 0;
+    position: absolute;
+}
+
+.container{
+    z-index:1;
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;;
+    width:400px;
+    height:450px;
+    margin-left: 215px;
+    margin-top: 145px;
+}
+
+.container{
+    display:none;
+}
+
+.container ul {
+   list-style: none;
+   padding-left: 20px;
+   padding-right:10px;
+   font-size:14px;
+   
+}
+.container a{
+    text-decoration: none;
+}
+.container li:hover{
+    background-color: #e7e7e7;
+}
+
+
+body{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+
+/* HEADER STYLING */
+
+.header{
+    background-color: darkslategray;
+    width: 100%;
+    height:90px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.header img{
+     height:80px;
+     width:80px;
+     margin-left:20px;
+     border-radius: 15px;
+     box-shadow: 10px 5px 5px darkslategray;
+     padding-top: 5px;
+     padding-left:0%;
+
+}
+
+.header-title h1,h2{
+    color:white;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.header-title h1{
+    text-align: center;
+}
+
+
+
+/* NAVBAR STYLING */
+
+.navbar1{
+    background-color: white;
+}
+
+.navbar2 ul{
+    width:80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+    font-weight: bold;
+}
+
+.navbar2 ul{
+    padding-left: 10px;
+}
+
+
+.navbar2 a {
+    text-decoration: none;
+    color: darkgray; /* Very light gray color for text */
+    font-size: small;
+}
+
+li.blong {
+    background-color:#e7e7e7;
+    padding: 15px; /* Adjust as needed */
+    margin: 0; /* Reset margins if necessary */
+    display: block; /* Ensure it behaves as a block element */
+}
+
+
+/* Add hover effect for better visibility */
+.navbar2 a:hover {
+    color: #000000; /* Black color on hover */
+}
+
+
+/* MARQUEE STYLING */
+
+marquee{
+    border-style: solid;
+   border-width: 0.1px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   width: 100vw;
+}
+
+marquee a{
+    text-decoration: none;
+    color:blue;
+    font-weight: bold;
+}
+
+marquee a:hover{
+    text-decoration: underline;
+    
+}
+
+
+/* NOTIFICATION STYLING */
+
+.notidisplay h2{
+    color: brown;
+    font-style: italic;
+    padding-left: 30px;
+    margin-top: 20px;
+    margin-left: 5%;
+}
+
+.notidisplay marquee{
+    height: 1300px;
+    width: 750px;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: relative;
+}
+
+.notidisplaymarquee{
+    margin-left: 5%;
+    margin-top:20px;
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 30px;
+    font-size: small;
+}
+.notidisplaymarquee p{
+    color:#734d26;
+    font-size:medium;
+    font-weight: bold;
+}
+.notidisplaymarquee a{
+    font-size: 14px;
+    font-weight: 100;
+    color:blue;
+}
+
+.notification{
+    display: flex;
+    justify-content: space-between;
+}
+
+.oval-image {
+    width: 300px; /* Set the width you desire */
+    height: 200px; /* Set the height you desire */
+    border-radius: 50%; /* Make the image oval */
+    object-fit: cover; /* Ensure the image covers the container */
+    margin-top: 30%;
+   padding-left: 0%;
+   margin-left: 0%;
+   display: flex;
+   align-items: start;
+}
+
+
+
+
+
+/* FOOTER STYLING */
+
+
+footer{
+    background-color: black;
+    width:100%;
+    height: 60px;
+}
+
+footer p{
+    color:white;
+    text-align: center;
+    padding-top: 5px;
+    font-size: small;
+}
+
+
+footer a{
+    text-decoration: none;
+    color:lightblue
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
